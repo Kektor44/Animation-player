@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeJam Animation Player</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+<header class="header">
+    <img src="imgs/iconfinder_menu_3324998.png" alt="">
+    <h2>CodeJam - Animation Player</h2>
+    <img class="shap" src="imgs/Shap.png" alt="">
+</header>
+<main class="main">
+    <div class="pallete">
+        <div onclick="paintTool()" id="paint" tabindex="1" title="Press 'Ctrl + B'">
+            <img src="imgs/i1.png" alt="">
+            <h3>Paint bucket</h3>
+        </div>
+        <div>
+            <img src="imgs/i2.png" alt="">
+            <h3>Choose color</h3>
+            <input onchange="currColor()" id="color" type="color" value="#FFFFFF">
+        </div>
+        <hr>
+        <div onclick="moveTool()" id="move" tabindex="3" title="Press 'Ctrl + M'">
+            <img src="imgs/i3.png" alt="">
+            <h3>Move</h3>
+        </div>
+        <div onclick="transTool()" id="transform" tabindex="4" title="Press 'Ctrl + I'">
+            <img src="imgs/i4.png" alt="">
+            <h3>Transform</h3>
+        </div>
+
+
+    </div>
+    <div class="colors">
+        <div>
+            <div id="currentColor" class="color-item"></div>
+            <h3>Current color</h3>
+        </div>
+        <div>
+            <div id="prevColor" class="color-item"></div>
+            <h3>Prev color</h3>
+        </div>
+        <hr>
+        <div class="red">
+            <div class="color-item"></div>
+            <h3>red</h3>
+        </div>
+        <div class="blue">
+            <div class="color-item"></div>
+            <h3>blue</h3>
+        </div>
+
+    </div>
+    <div id="frames">
+        <div class="frame" onclick="frameTool(event)"></div>
+        <button id="addFrame">Add frame</button>
+
+    </div>
+    <div id="canvas">
+        <div class="canvas-item"></div>
+        <div class="canvas-item"></div>
+        <div class="canvas-item"></div>
+        <div class="canvas-item"></div>
+        <div class="canvas-item"></div>
+        <div class="canvas-item"></div>
+        <div class="canvas-item"></div>
+        <div class="canvas-item"></div>
+        <div class="canvas-item"></div>
+    </div>
+    <div id="animation">
+
+    </div>
+    <div class="inputBlock">
+        <button id="fullScreen">Full screen</button>
+        <p id="fpsValue">10 FPS</p>
+    <input onchange=" fps.innerHTML =input.value + ' FPS'" id="input" type="range" min="1" max="24" value="10">
+    </div>
+</main>
+</body>
+</html>
